@@ -11,6 +11,7 @@ driver.maximize_window()
 
 element = driver.find_element(By.ID, "APjFqb")
 
+
 element.send_keys("Hello World")
 
 driver.close()
