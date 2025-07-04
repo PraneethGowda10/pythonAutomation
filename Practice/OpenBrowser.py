@@ -1,5 +1,5 @@
 from selenium import webdriver
-import os
+from selenium.webdriver.common.by import By
 
 # Initialize Chrome driver using Selenium Manager (built-in)
 driver = webdriver.Chrome()
@@ -9,4 +9,8 @@ driver.get("https://www.google.com/")
 
 driver.maximize_window()
 
-driver.quit()
+element = driver.find_element(By.ID, "APjFqb")
+
+element.send_keys("Hello World")
+
+driver.close()
